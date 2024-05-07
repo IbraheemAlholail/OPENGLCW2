@@ -3,8 +3,11 @@
 CONTROLS:
 
 WASD: move fish
-QE: Rotate fish
+
+Q & E: Rotate fish
+
 ARROW L&R: Pan camera
+
 ESC: Exit Game
 
 This project is an OpenGL demonstration of various shader techniques. 
