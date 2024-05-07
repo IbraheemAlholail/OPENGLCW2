@@ -18,10 +18,15 @@ using glm::vec4;
 using glm::mat4;
 using glm::mat3;
 
-vec3 fishPos = vec3(0.0f, 0.0f, 0.0f);
+vec3 fishPos = vec3(2.0f, 0.0f, 2.0f);
 vec3 fishStartPos = fishPos;
 
+vec3 cakePos = vec3(-10.0f, 0.0f, -10.0f);
+vec3 cakeStartPos = cakePos;
+
 float fishSpin = 0.0f;
+
+bool win = false;
 
 SceneBasic_Uniform::SceneBasic_Uniform() :
     tPrev(0), 
@@ -31,6 +36,7 @@ SceneBasic_Uniform::SceneBasic_Uniform() :
     {
     meshBowl = ObjMesh::load("media/bowl.obj", true);
     meshFish = ObjMesh::load("media/fish.obj", true);
+    meshCake = ObjMesh::load("media/cake.obj", true);
 }
 
 void SceneBasic_Uniform::initScene()
@@ -43,7 +49,6 @@ void SceneBasic_Uniform::initScene()
 
     view = glm::lookAt(vec3(0.0f, 5.0f, 15.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
 
-    //model = mat4(1.0f);
     setupFBO();
     GLuint programHandle = shadowProg.getHandle();
     pass1Index = glGetSubroutineIndex(programHandle, GL_FRAGMENT_SHADER, "recordDepth");
@@ -156,7 +161,7 @@ void SceneBasic_Uniform::render()
     solidProg.setUniform("Color", vec4(1.0f, 0.0f, 0.0f, 1.0f));
     mat4 mv = view * lightFrustum.getInverseViewMatrix();
     solidProg.setUniform("MVP", projection * mv);
-    lightFrustum.render();
+    //lightFrustum.render();
 }
 
 
@@ -207,7 +212,7 @@ void SceneBasic_Uniform::drawScene()
     plane.render();
 
     //render the fish 
-    shadowProg.setUniform("Material.Kd", vec3(1.0f, 0.0f, 0.0f));
+    shadowProg.setUniform("Material.Kd", vec3(1.0f, 0.0f, 0.0f)),
     shadowProg.setUniform("Material.Ka", vec3(0.05f, 0.05f, 0.05f));
     shadowProg.setUniform("Material.Ks", vec3(0.0f, 0.0f, 0.0f));
     shadowProg.setUniform("Material.Shininess", 1.0f);
@@ -215,10 +220,19 @@ void SceneBasic_Uniform::drawScene()
     model = glm::translate(model, fishPos);
     model = glm::rotate(model, fishSpin, vec3(0.0f, 1.0f, 0.0f));
     model = glm::scale(model, vec3(0.5f));
-
-
     setmatrices();
     meshFish->render();
+
+    //render the cake
+    shadowProg.setUniform("Material.Kd", vec3(0.75f, 0.35f, 0.05f)),
+       shadowProg.setUniform("Material.Ka", vec3(0.05f, 0.05f, 0.05f));
+    shadowProg.setUniform("Material.Ks", vec3(0.0f, 0.0f, 0.0f));
+    shadowProg.setUniform("Material.Shininess", 1.0f);
+    model = mat4(1.0f);
+    model = glm::translate(model, cakePos);
+    model = glm::scale(model, vec3(2.0f));
+    setmatrices();
+    meshCake->render();
 
     PBRProg.use();
 
@@ -305,6 +319,35 @@ void SceneBasic_Uniform::processInput(GLFWwindow* window)
 		spinAngle = minAngle;
 	if (spinAngle > maxAngle)
 		spinAngle = maxAngle;
+
+    //don't let the fish go out of bounds
+    vec3 minPos = vec3(-4.5f, 0.1f, -4.5f);
+    vec3 maxPos = vec3(15.0f, 0.1f, 15.0f);
+
+    if (fishPos.x < minPos.x)
+		fishPos.x = minPos.x;
+    if (fishPos.x > maxPos.x)
+        fishPos.x = maxPos.x;
+    if (fishPos.z < minPos.z)
+        fishPos.z = minPos.z;
+    if (fishPos.z > maxPos.z)
+        fishPos.z = maxPos.z;
+
+
+    //if the fish is in the bowl, set the win to true
+    vec3 bowlPos = vec3(0.0f, 0.1f, 0.0f);
+    float bowlRadius = 2.0f;
+
+    if (glm::distance(fishPos, bowlPos) < bowlRadius)
+		win = true;
+    else
+        win = false;
+
+    //if win is true, move the cake to 5.0f, 0.1f, 5.0f
+    if (win)
+		cakePos = vec3(5.0f, 0.1f, 5.0f);
+	else
+		cakePos = cakeStartPos;
 
 }
 

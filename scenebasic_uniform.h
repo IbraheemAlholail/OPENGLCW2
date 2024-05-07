@@ -20,7 +20,7 @@ public:
     Plane plane;
     float tPrev,angle,time,deltaT,rotSpeed,spinAngle;
     int nParticles;
-    std::unique_ptr<ObjMesh> meshBowl, meshFish;
+    std::unique_ptr<ObjMesh> meshBowl, meshFish, meshCake;
 
 
     GLSLProgram shadowProg, solidProg, PBRProg;
