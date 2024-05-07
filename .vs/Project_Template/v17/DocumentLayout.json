@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\shader\\basic_uniform.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:shader\\basic_uniform.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\scenebasic_uniform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:scenebasic_uniform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\shader\\PBR.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:shader\\PBR.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\shader\\basic_uniform.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:shader\\basic_uniform.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\shader\\solid.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PBR.frag",
               "DocumentMoniker": "H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\shader\\PBR.frag",
               "RelativeDocumentMoniker": "shader\\PBR.frag",
@@ -51,20 +51,32 @@
               "ViewState": "AQIAAEUAAAAAAAAAAAAAAFQAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-05-06T21:55:32.157Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "scenebasic_uniform.cpp",
               "DocumentMoniker": "H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\scenebasic_uniform.cpp",
               "RelativeDocumentMoniker": "scenebasic_uniform.cpp",
               "ToolTip": "H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\scenebasic_uniform.cpp",
               "RelativeToolTip": "scenebasic_uniform.cpp",
-              "ViewState": "AQIAAEkBAAAAAAAAAAAswFYBAAAIAAAA",
+              "ViewState": "AQIAAEABAAAAAAAAAAAswFYBAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-08T16:26:04.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "basic_uniform.frag",
+              "DocumentMoniker": "H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\shader\\basic_uniform.frag",
+              "RelativeDocumentMoniker": "shader\\basic_uniform.frag",
+              "ToolTip": "H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\shader\\basic_uniform.frag",
+              "RelativeToolTip": "shader\\basic_uniform.frag",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAQwEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-12T03:53:59.97Z",
               "EditorCaption": ""
             },
             {
@@ -77,8 +89,7 @@
               "RelativeToolTip": "scenebasic_uniform.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-12T16:39:48.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T16:39:48.943Z"
             },
             {
               "$type": "Document",
@@ -90,8 +101,7 @@
               "RelativeToolTip": "shader\\basic_uniform.vert",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-08T16:26:04.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-08T16:26:04.86Z"
             },
             {
               "$type": "Document",
@@ -103,21 +113,7 @@
               "RelativeToolTip": "shader\\PBR.vert",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-06T21:55:32.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "basic_uniform.frag",
-              "DocumentMoniker": "H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\shader\\basic_uniform.frag",
-              "RelativeDocumentMoniker": "shader\\basic_uniform.frag",
-              "ToolTip": "H:\\Users\\heemo\\Desktop\\OpenGL\\GitHub Repo\\OPENGLCW2\\shader\\basic_uniform.frag",
-              "RelativeToolTip": "shader\\basic_uniform.frag",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAEAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-12T03:53:59.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T21:55:32.73Z"
             },
             {
               "$type": "Document",
@@ -129,8 +125,7 @@
               "RelativeToolTip": "shader\\solid.frag",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-06T18:04:34.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T18:04:34.377Z"
             }
           ]
         }
