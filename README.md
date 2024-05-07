@@ -4,11 +4,15 @@ CONTROLS:
 
 WASD: move fish
 
+Space: Jump
+
 Q & E: Rotate fish
 
 ARROW L&R: Pan camera
 
 ESC: Exit Game
+
+The game can be run by downloading the "EXECUTABLE" file and running the .exe file.
 
 This project is an OpenGL demonstration of various shader techniques. 
 The project was made in Visual Studios 2022 (v.17.9.0)
@@ -27,6 +31,11 @@ to it. The properties that can change this are the material roughness and whethe
 With these shaders, the main bulk of the code in SceneBasic_Uniform renders the scene with different lighting and objects, including custom made
 models from blender, such as the fish bowl, fish and cake. Also here, the game elements are made with camera controls to simulate a home security camera,
 and the ability to control the fishes movement inside the play area.
+
+The shaders are run in different shader files and are assigned to different programs as to allow for easy use and understandable code. The shadows are used to 
+light the scene, and the PBR is used to give the fish bowl a shiny blue texture.
+
+This project originated from my CW1 project but that was ultimately only used as inspiration as the visuals were changed heavily. 
 
 Win the game by controlling the fish and taking him back to the bowl! you might even get a little surprise!
 
