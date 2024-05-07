@@ -1,6 +1,6 @@
 # OpenGL Coursework 2 (70%) "The Fish"
 
-CONTROlS
+CONTROLS
 WASD: move fish
 QE: Rotate fish
 ARROW L&R: Pan camera
