@@ -1,2 +1,4 @@
-# OPENGLCW2
+# OpenGL Coursework 2 (70%)
+
+
  
